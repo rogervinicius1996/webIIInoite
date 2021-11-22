@@ -1,4 +1,7 @@
+package model;
+
 public class Endereco {
+    private int codigo;
     private String rua;
     private String numero;
     private String bairro;
@@ -6,7 +9,8 @@ public class Endereco {
     private String estado;
     private String cep;
 
-    public Endereco(String rua, String numero, String bairro, String cidade, String estado) {
+    public Endereco(int codigo, String rua, String numero, String bairro, String cidade, String estado) {
+        this.codigo = codigo;
         this.rua = rua;
         this.numero = numero;
         this.bairro = bairro;
@@ -14,7 +18,8 @@ public class Endereco {
         this.estado = estado;
     }
 
-    public Endereco(String rua, String numero, String bairro, String cidade, String estado, String cep) {
+    public Endereco(int codigo, String rua, String numero, String bairro, String cidade, String estado, String cep) {
+        this.codigo = codigo;
         this.rua = rua;
         this.numero = numero;
         this.bairro = bairro;
@@ -30,6 +35,10 @@ public class Endereco {
 
     public String getCEP() {
         return this.cep;
+    }
+
+    public int getCodigo() {
+        return codigo;
     }
 
     // Setters
