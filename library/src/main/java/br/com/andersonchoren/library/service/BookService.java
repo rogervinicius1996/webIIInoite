@@ -1,6 +1,7 @@
 package br.com.andersonchoren.library.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -55,5 +56,9 @@ public class BookService {
 
     public List<Book> findByGenre(Genre genre) {
         return repository.findByGenre(genre);
+    }
+
+    public Optional<Book> findById(int id) {
+        return repository.findById(id);
     }
 }
